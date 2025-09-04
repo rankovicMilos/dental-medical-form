@@ -1,0 +1,197 @@
+/* Tell Tailwind this file should reference the utilities/theme from index.css */
+@reference "./index.css";
+/* font + variables */
+@layer base {
+  @font-face {
+    font-family: "FreightNeoW03 Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("FreightNeoW03 Regular"), local("FreightNeoW03-Regular"),
+      local("FreightNeoW03"),
+      url("/fonts/FreightNeoW03-Regular.woff2") format("woff2"),
+      url("/fonts/FreightNeoW03-Regular.woff") format("woff");
+  }
+}
+:root {
+  --conf-primary: #736661;
+  --conf-primary-contrast: #f1f0e4;
+  --conf-text: #111827;
+  --conf-muted: #6b7280;
+  --conf-bg: #f1f0e4;
+  --conf-card: #ffffff;
+  --conf-border: #f1f0e4;
+  --conf-radius: 14px;
+  --conf-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  --conf-font: "FreightNeoW03 Regular", -apple-system, system-ui, "Segoe UI",
+    Roboto, Helvetica, Arial, "Noto Sans";
+}
+
+body {
+  @apply min-h-screen bg-[var(--conf-bg)] font-[var(--conf-font)];
+}
+
+html,
+body,
+#root,
+.confident-intake-root,
+.conf-wrapper {
+  @apply min-h-full h-auto bg-[var(--conf-bg)];
+}
+
+/* now define your component classes */
+.conf-wrapper {
+  @apply min-h-screen bg-[var(--conf-bg)] p-10 px-4 font-[var(--conf-font)];
+}
+.conf-container {
+  @apply max-w-[1100px] mx-auto;
+}
+
+.conf-card {
+  @apply m-5 bg-[var(--conf-card)] border border-[var(--conf-border)] rounded-[var(--conf-radius)] shadow-[var(--conf-shadow)] overflow-hidden;
+}
+
+.conf-header {
+  @apply flex items-center justify-between gap-3 px-6 py-5 md:items-start;
+}
+.conf-header-right {
+  @apply flex items-center gap-3 md:flex-row md:items-end;
+}
+.conf-logo {
+  @apply block h-9;
+}
+.conf-brand {
+  @apply text-[var(--conf-primary)] font-extrabold tracking-[0.2px];
+}
+
+.conf-title {
+  @apply m-0 text-[28px] leading-tight font-medium text-[var(--conf-text)];
+}
+.conf-subtitle {
+  @apply mt-1.5 text-sm text-[var(--conf-muted)];
+}
+
+.conf-lang-switch {
+  @apply inline-flex rounded-full border border-gray-200 bg-slate-100 p-1;
+}
+.conf-lang-btn {
+  @apply cursor-pointer rounded-full px-3 py-1  text-slate-600;
+}
+.conf-lang-btn.is-active {
+  @apply bg-[var(--conf-primary)] text-[var(--conf-primary-contrast)];
+}
+
+.conf-form {
+  @apply grid p-7 [overflow-wrap:anywhere];
+}
+.conf-section-head {
+  @apply mb-[18px];
+}
+.conf-section-title {
+  @apply m-0 text-[22px] font-medium text-[var(--conf-text)];
+}
+.conf-grid {
+  @apply grid grid-cols-1 gap-[18px] md:grid-cols-2;
+}
+.conf-span-2 {
+  @apply col-span-1 md:col-span-2;
+}
+
+.conf-label {
+  @apply mb-2 block text-sm text-gray-700;
+}
+
+.conf-question-label {
+  @apply mb-4 block text-sm font-medium text-[var(--conf-text)];
+}
+
+.conf-question-text {
+  @apply ms-2 text-sm text-[var(--conf-muted)];
+}
+
+.conf-input {
+  @apply w-full rounded-[10px] border border-[var(--conf-border)] bg-white p-3 text-base outline-none transition focus:border-[var(--conf-primary)] focus:ring-4 focus:ring-[color:var(--conf-primary)]/15;
+}
+.conf-textarea {
+  @apply min-h-[120px] resize-y;
+}
+
+.conf-signature-container {
+  @apply mt-2.5 flex flex-col items-end gap-2;
+}
+.conf-signature {
+  @apply w-full max-w-[350px] overflow-hidden rounded-lg border border-[var(--conf-muted)] bg-white;
+}
+.conf-signature canvas {
+  @apply block !h-[200px] !w-full;
+}
+
+.conf-review {
+  @apply mb-4 rounded-[12px] border border-dashed border-gray-200 bg-slate-50 p-[18px];
+}
+.conf-review-title {
+  @apply m-0 mb-2.5 font-medium text-[var(--conf-text)];
+}
+.conf-review-grid {
+  @apply grid grid-cols-2 gap-3 text-sm text-gray-800 md:grid-cols-1;
+}
+
+.conf-consent {
+  @apply flex flex-col gap-3;
+}
+.conf-checkbox {
+  @apply flex items-center gap-2.5 text-sm m-2 text-gray-900;
+}
+
+.conf-checkbox input {
+  @apply h-4 w-4 rounded-sm border border-gray-300 bg-gray-100  dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600;
+}
+
+.conf-actions {
+  @apply mt-6 flex justify-between gap-3 border-t border-[var(--conf-border)] pt-[18px];
+}
+
+.conf-btn {
+  @apply rounded-[10px] px-5 py-3 tracking-[0.2px] transition active:translate-y-px;
+}
+.conf-btn-dark {
+  @apply bg-gray-900 text-white opacity-90 hover:opacity-100;
+}
+.conf-btn-primary {
+  @apply bg-[var(--conf-primary)] text-white hover:brightness-95;
+}
+.conf-btn-disabled {
+  @apply cursor-not-allowed bg-gray-200 text-gray-400;
+}
+
+.conf-center {
+  @apply p-7 text-center;
+}
+.conf-success-circle {
+  @apply mx-auto mb-4 flex h-[84px] w-[84px] items-center justify-center rounded-full bg-emerald-50 text-emerald-600;
+}
+.conf-text {
+  @apply mt-1.5 mb-4.5 text-[var(--conf-muted)];
+}
+
+/* Subsection styling for merged form */
+.conf-subsection {
+  @apply mb-8;
+}
+
+.conf-subsection-title {
+  @apply mb-4 text-lg font-semibold text-[var(--conf-text)] border-b border-[var(--conf-border)] pb-2;
+}
+
+@media (max-width: 768px) {
+  .conf-header {
+    @apply flex-col items-start gap-4;
+  }
+  .conf-header-right {
+    @apply flex-col items-end gap-3 md:flex-row md:items-end;
+  }
+
+  .conf-title {
+    @apply text-2xl;
+  }
+}
