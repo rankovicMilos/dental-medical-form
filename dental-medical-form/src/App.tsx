@@ -3,7 +3,6 @@ import i18n from "./i18n";
 import logo from "./assets/confident.svg";
 import { useState } from "react";
 import "./App.css";
-import { type PatientData, emptyPatient } from "./Models";
 import { FormRenderer } from "./form/FormRenderer";
 import { useTranslation } from "react-i18next";
 /* TODO
@@ -13,7 +12,7 @@ import { useTranslation } from "react-i18next";
   */
 
 type Lang = "en" | "rs";
-//   en: {
+
 //     brand: "ConfiDental",
 //     headerTitle: "Patient Medical Form",
 //     subtitle: "Please fill out all required information",
@@ -367,9 +366,6 @@ type Lang = "en" | "rs";
 
 export default function ConfidentMedicalForm() {
   const [lang, setLang] = useState<Lang>("en");
-  const [formData, setFormData] = useState<PatientData>({
-    ...emptyPatient,
-  });
   const { t } = useTranslation("form");
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -388,7 +384,6 @@ export default function ConfidentMedicalForm() {
               className="btn btn-primary button primary-btn conf-btn conf-btn-primary"
               onClick={() => {
                 setIsSubmitted(false);
-                setFormData({ ...emptyPatient });
               }}
             >
               "asd asd asd"
@@ -445,7 +440,7 @@ export default function ConfidentMedicalForm() {
             </div>
           </div>
 
-          <FormRenderer formData={formData} setFormData={setFormData} />
+          <FormRenderer />
         </div>
       </div>
     </div>
