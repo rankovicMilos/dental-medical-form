@@ -21,7 +21,7 @@ const translations: Record<Lang, any> = {
     percent: "Complete",
     sections: [
       "Personal Information",
-      "Contact Details",
+      "Medical Details",
       "Emergency Contact",
       "How You Found Us",
       "Consent & Review",
@@ -30,60 +30,132 @@ const translations: Record<Lang, any> = {
       firstName: "First Name *",
       lastName: "Last Name *",
       dateOfBirth: "Date of Birth *",
-      gender: "Gender *",
-      genderOpts: {
-        empty: "Select Gender",
-        male: "Male",
-        female: "Female",
-        other: "Other",
-        prefer: "Prefer not to say",
-      },
       phone: "Phone Number *",
       phonePh: "e.g., +381 63 386 382",
       email: "Email Address *",
       medicalQuestions: [
-        { question: "Have you been ill with?", name: "illness1" },
-        { question: "Do you have any allergies?", name: "allergies" },
         {
-          question: "Are you currently taking any medications?",
+          question: "",
+          name: "epilepsy-jaundice",
+          answers: [
+            { answer: "I suffer from epilepsy", name: "epilepsy" },
+            { answer: "I had jaundice", name: "jaundice" },
+            { answer: "I have high blood pressure", name: "hypertension" },
+          ],
+        },
+        { question: "I had?", name: "illness1", answers: [] },
+        {
+          question: "I had?",
+          name: "illness1",
+          answers: [
+            { answer: "Rheumatic fever", name: "illness1-a" },
+            { answer: "Bacterial endocarditis", name: "illness1-b" },
+            {
+              answer: "Myocardial infarction (heart attack)",
+              name: "illness1-c",
+            },
+          ],
+        },
+        {
+          question: "I suffer from",
+          name: "illness2",
+          answers: [
+            { answer: "Diabetes", name: "illness2-a" },
+            { answer: "Addison's disease", name: "illness2-b" },
+            { answer: "Hyperthyroidism", name: "illness2-c" },
+            { answer: "AIDS", name: "illness2-d" },
+          ],
+        },
+        {
+          question: "I have an implant",
+          name: "implants",
+          answers: [
+            { answer: "Artificial heart valve", name: "implants-a" },
+            { answer: "Pacemaker", name: "implants-b" },
+            { answer: "Artificial hip/artificial knees", name: "implants-c" },
+            { answer: "AIDS", name: "implants-d" },
+          ],
+        },
+        {
+          question: "I had",
+          name: "illness3",
+          answers: [
+            { answer: "Herpes simplex", name: "illness3-a" },
+            { answer: "Herpes zoster (shingles)", name: "illness3-b" },
+            { answer: "Viral infection", name: "illness3-c" },
+          ],
+        },
+        { question: "I bleed longer after cuts", name: "cut-bleed" },
+        {
+          question: "I am allergic to",
+          name: "alergies",
+          answers: [
+            { answer: "Medications", name: "alergies-a" },
+            { answer: "Food", name: "alergies-b" },
+            { answer: "Other", name: "alergies-c" },
+          ],
+        },
+        {
+          question: "I suffer from",
+          name: "illness4",
+          answers: [
+            { answer: "Hemophilia", name: "illness4-a" },
+            { answer: "Thrombocytopenia", name: "illness4-b" },
+            { answer: "Leukemia", name: "illness4-c" },
+            { answer: "Von Willebrand disease", name: "illness4-d" },
+          ],
+        },
+        {
+          question: "I suffer from excessive blood clotting",
+          name: "blood-cloth",
+        },
+        { question: "I suffer from bronchial asthma", name: "asthma" },
+        {
+          question: "I had",
+          name: "illness5",
+          answers: [
+            { answer: "Pulmonary tuberculosis", name: "illness5-a" },
+            { answer: "Tuberculosis of other organs", name: "illness5-b" },
+          ],
+        },
+        {
+          question: "I suffer from an ulcer of the",
+          name: "illness6",
+          answers: [
+            { answer: "Stomach", name: "illness6-a" },
+            { answer: "Duodenum", name: "illness6-b" },
+          ],
+        },
+        {
+          question: "I suffer from diseases not listed in this questionnaire?",
+          name: "illness7",
+        },
+        {
+          question: "I am currently taking the following medications:",
           name: "medications",
         },
         {
-          question: "Do you have any chronic conditions?",
-          name: "chronicConditions",
+          question: "",
+          name: "illness8",
+          answer: "So far I have had surgeries:",
         },
-        { question: "Have you had any surgeries?", name: "surgeries" },
         {
-          question: "Do you have any dental concerns?",
-          name: "dentalConcerns",
+          question: "",
+          name: "cigarettes",
+          answer: "I smoke ____ cigarettes per day",
+        },
+        {
+          question: "",
+          name: "alcohol",
+          answer: "I drink alcohol daily",
+        },
+        {
+          question: "",
+          name: "drugs",
+          answer: "I use drugs",
         },
       ],
-      medicalAnswers: [
-        { answer: "Virus 1", name: "illness1" },
-        { answer: "Virus 2", name: "illness2" },
-        { answer: "Virus 3", name: "illness3" },
-        { answer: "Virus 4", name: "illness4" },
-        { answer: "Virus 5", name: "illness5" },
-        { answer: "Virus 6", name: "illness6" },
-        { answer: "Virus 7", name: "illness7" },
-        { answer: "Virus 8", name: "illness8" },
-        { answer: "Virus 9", name: "illness9" },
-        { answer: "Virus 10", name: "illness10" },
-        { answer: "Virus 11", name: "illness11" },
-        { answer: "Virus 12", name: "illness12" },
-        { answer: "Virus 13", name: "illness13" },
-        { answer: "Virus 14", name: "illness14" },
-        { answer: "Virus 15", name: "illness15" },
-        { answer: "Virus 16", name: "illness16" },
-        { answer: "Virus 17", name: "illness17" },
-        { answer: "Virus 18", name: "illness18" },
-        { answer: "Virus 19", name: "illness19" },
-        { answer: "Virus 20", name: "illness20" },
-        { answer: "Virus 21", name: "illness21" },
-        { answer: "Virus 22", name: "illness22" },
-        { answer: "Virus 23", name: "illness23" },
-        { answer: "Virus 24", name: "illness24" },
-      ],
+
       notBeenIll: "I have not been ill",
       hearQ: "How did you hear about our clinic? *",
       hearOpts: {
@@ -142,59 +214,125 @@ const translations: Record<Lang, any> = {
       firstName: "Ime *",
       lastName: "Prezime *",
       dateOfBirth: "Datum rođenja *",
-      gender: "Pol *",
-      genderOpts: {
-        empty: "Izaberite pol",
-        male: "Muški",
-        female: "Ženski",
-        other: "Drugo",
-        prefer: "Ne želim da navedem",
-      },
       phone: "Broj telefona *",
       phonePh: "npr. +381 63 386 382",
       email: "Email adresa *",
       medicalQuestions: [
-        { question: "Da li ste bili bolesni od?", name: "illness1" },
-        { question: "Da li imate alergije?", name: "allergies" },
         {
-          question: "Da li trenutno uzimate neke lekove?",
+          question: "",
+          name: "epilepsy",
+          answers: [
+            { answer: "Bolujem od epilepsije", name: "epilepsy" },
+            { answer: "Prelezao/la sam zuticu", name: "jaundice" },
+          ],
+        },
+        {
+          question: "Prelezao/la sam?",
+          name: "illness1",
+          answers: [
+            { answer: "Reumatsku goroznicu", name: "illness1-a" },
+            { answer: "Bakterijski endokardit", name: "illness1-b" },
+            { answer: "Infarkt miokarda", name: "illness1-c" },
+          ],
+        },
+        {
+          question: "Bolujem od",
+          name: "illness2",
+          answers: [
+            { answer: "Dijabetesa", name: "illness2-a" },
+            { answer: "Adisonove bolesti", name: "illness2-b" },
+            { answer: "Hipertireoze", name: "illness2-c" },
+            { answer: "Od side (AIDS)", name: "illness2-d" },
+          ],
+        },
+        {
+          question: "Imam ugradjen",
+          name: "implants",
+          answers: [
+            { answer: "Veštački zalistak", name: "implants-a" },
+            { answer: "Pace maker", name: "implants-b" },
+            { answer: "Veštački kuk/ veštačka kolena", name: "implants-c" },
+            { answer: "Od side (AIDS)", name: "implants-d" },
+          ],
+        },
+        {
+          question: "Prelezao/la sam",
+          name: "illness3",
+          answers: [
+            { answer: "Herpes simplex", name: "illness3-a" },
+            { answer: "Herpes zoster", name: "illness3-b" },
+            { answer: "virusnu infekciju", name: "illness3-c" },
+          ],
+        },
+        { question: "Duze krvarim posle posekotine", name: "cut-bleed" },
+        {
+          question: "Alergican/na sam na",
+          name: "alergies",
+          answers: [
+            { answer: "Lekove", name: "alergies-a" },
+            { answer: "Hranu", name: "alergies-b" },
+            { answer: "Ostalo", name: "alergies-c" },
+          ],
+        },
+        {
+          question: "Bolujem od ",
+          name: "illness4",
+          answers: [
+            { answer: "Hemofilije", name: "illness4-a" },
+            { answer: "Trombocitopenije", name: "illness4-b" },
+            { answer: "Leukemije", name: "illness4-c" },
+            { answer: "Von Willebrandove bolesti", name: "illness4-d" },
+          ],
+        },
+        {
+          question: "Bolujem od prekomernog zgrušavanja krvi",
+          name: "blood-cloth",
+        },
+        { question: "Bolujem od bronhijalne astme", name: "asthma" },
+        {
+          question: "Prelezeo/la sam",
+          name: "illness5",
+          answers: [
+            { answer: "TBC pluca", name: "illness5-a" },
+            { answer: "drugih organa", name: "illness5-b" },
+          ],
+        },
+        {
+          question: "Bolujem od cira na",
+          name: "illness6",
+          answers: [
+            { answer: "želucu", name: "illness6-a" },
+            { answer: "dvanaestopalačnom crevu", name: "illness6-b" },
+          ],
+        },
+        {
+          question: "Bolujem od bolesti koje nisu navedene u upitniku?",
+          name: "illness7",
+        },
+        {
+          question: "Trenutno uzimam sledece lekove:",
           name: "medications",
         },
         {
-          question: "Da li imate hronične bolesti?",
-          name: "chronicConditions",
+          question: "",
+          name: "illness8",
+          answer: "Do sada sam imao/la operacije:",
         },
-        { question: "Da li ste imali operacije?", name: "surgeries" },
         {
-          question: "Da li imate neke stomatološke probleme?",
-          name: "dentalConcerns",
+          question: "",
+          name: "cigarettes",
+          answer: "Pušim ____ cigareta dnevno",
         },
-      ],
-      medicalAnswers: [
-        { answer: "Corona-19", name: "virus1" },
-        { answer: "Male boginje", name: "virus2" },
-        { answer: "Ospice", name: "virus3" },
-        { answer: "Rubeola", name: "virus4" },
-        { answer: "Mumps", name: "virus5" },
-        { answer: "Varicella", name: "virus6" },
-        { answer: "Herpes Zoster", name: "virus7" },
-        { answer: "Virus 8", name: "virus8" },
-        { answer: "Virus 9", name: "virus9" },
-        { answer: "Virus 10", name: "virus10" },
-        { answer: "Virus 11", name: "virus11" },
-        { answer: "Virus 12", name: "virus12" },
-        { answer: "Virus 13", name: "virus13" },
-        { answer: "Virus 14", name: "virus14" },
-        { answer: "Virus 15", name: "virus15" },
-        { answer: "Virus 16", name: "virus16" },
-        { answer: "Virus 17", name: "virus17" },
-        { answer: "Virus 18", name: "virus18" },
-        { answer: "Virus 19", name: "virus19" },
-        { answer: "Virus 20", name: "virus20" },
-        { answer: "Virus 21", name: "virus21" },
-        { answer: "Virus 22", name: "virus22" },
-        { answer: "Virus 23", name: "virus23" },
-        { answer: "Virus 24", name: "virus24" },
+        {
+          question: "",
+          name: "alcohol",
+          answer: "Svakodnevno pijem alkohol",
+        },
+        {
+          question: "",
+          name: "drugs",
+          answer: "Uzimam drogu",
+        },
       ],
       notBeenIll: "Niste bili bolesni",
       hearQ: "Kako ste čuli za našu kliniku? *",
@@ -238,15 +376,139 @@ const translations: Record<Lang, any> = {
   },
 };
 
-interface PatientData {
+// ===== Enums / literal union types for stable options =====
+export type PastIllness =
+  | "rheumaticFever"
+  | "bacterialEndocarditis"
+  | "myocardialInfarction";
+
+export type ChronicDisease =
+  | "diabetes"
+  | "addisonsDisease"
+  | "hyperthyroidism"
+  | "aids";
+
+export type ImplantType =
+  | "artificialValve"
+  | "pacemaker"
+  | "artificialHipOrKnees";
+
+export type InfectionHistory =
+  | "herpesSimplex"
+  | "herpesZoster"
+  | "viralInfection";
+
+export type AllergyType = "medications" | "food" | "other";
+
+export type BleedingDisorder =
+  | "hemophilia"
+  | "thrombocytopenia"
+  | "leukemia"
+  | "vonWillebrandDisease";
+
+export type TuberculosisType = "pulmonary" | "otherOrgans";
+export type UlcerSite = "stomach" | "duodenum";
+
+// ===== Medical History payload that maps to your questionnaire =====
+export interface MedicalHistory {
+  // Epilepsy / jaundice
+  epilepsy?: boolean;
+  jaundiceHistory?: boolean;
+  hypertension?: boolean;
+
+  // Past illnesses (checkbox group: I had…)
+  pastIllnesses?: PastIllness[]; // e.g., ["rheumaticFever", "myocardialInfarction"]
+
+  // Ongoing conditions (checkbox group: I suffer from…)
+  chronicDiseases?: ChronicDisease[]; // e.g., ["diabetes", "aids"]
+
+  // Implants (checkbox group: I have an implant…)
+  implants?: ImplantType[]; // e.g., ["pacemaker"]
+
+  // Infections you previously had (checkbox group: I had…)
+  infectionHistory?: InfectionHistory[]; // e.g., ["herpesZoster"]
+
+  // Bleeding & coagulation
+  bleedsLongerAfterCuts?: boolean;
+  bleedingDisorders?: BleedingDisorder[]; // e.g., ["hemophilia"]
+  hypercoagulableState?: boolean; // “I suffer from excessive blood clotting”
+
+  // Respiratory
+  bronchialAsthma?: boolean;
+
+  // Tuberculosis
+  tuberculosisHistory?: TuberculosisType[]; // e.g., ["pulmonary"]
+
+  // Peptic ulcer site
+  pepticUlcerSites?: UlcerSite[]; // e.g., ["duodenum"]
+
+  // Free-text fields
+  otherDiseases?: string; // “Diseases not listed…”
+  currentMedications?: string; // “I am currently taking…”
+  surgeriesHistory?: string; // “So far I have had surgeries:”
+
+  // Lifestyle
+  cigarettesPerDay?: number | null; // e.g., 0 if non-smoker, null if unknown
+  drinksAlcoholDaily?: boolean;
+  usesDrugs?: boolean;
+
+  // Raw field-name mapping (optional): keep compatibility with original keys if needed
+  // For example, to map UI components that still rely on legacy names.
+  _legacyNames?: Record<string, unknown>;
+}
+
+// ===== Your existing Patient model, extended with medicalHistory =====
+
+// ===== Handy initializer for forms =====
+export const emptyPatient: PatientData = {
+  firstName: "",
+  lastName: "",
+  dateOfBirth: "",
+  phone: "",
+  email: "",
+  beenIll: false,
+
+  emergencyName: "",
+  emergencyPhone: "",
+  emergencyRelationship: "",
+
+  hearAboutUs: "",
+  referralDetails: "",
+
+  medicalHistory: {
+    epilepsy: false,
+    jaundiceHistory: false,
+    hypertension: false,
+    pastIllnesses: [],
+    chronicDiseases: [],
+    implants: [],
+    infectionHistory: [],
+    bleedsLongerAfterCuts: false,
+    bleedingDisorders: [],
+    hypercoagulableState: false,
+    bronchialAsthma: false,
+    tuberculosisHistory: [],
+    pepticUlcerSites: [],
+    otherDiseases: "",
+    currentMedications: "",
+    surgeriesHistory: "",
+    cigarettesPerDay: null,
+    drinksAlcoholDaily: false,
+    usesDrugs: false,
+  },
+
+  hipaaConsent: false,
+  treatmentConsent: false,
+};
+
+export interface PatientData {
   // Personal Information
   firstName: string;
   lastName: string;
   dateOfBirth: string;
-  gender: string;
   phone: string;
   email: string;
-  beenIll: boolean;
+  beenIll: boolean; // you can derive/keep this, or deprecate in favor of medicalHistory checks
 
   // Emergency Contact
   emergencyName: string;
@@ -257,41 +519,8 @@ interface PatientData {
   hearAboutUs: string;
   referralDetails: string;
 
-  // Medical History - Illness checkboxes
-  illnesses: {
-    virus1: boolean;
-    virus2: boolean;
-    virus3: boolean;
-    virus4: boolean;
-    virus5: boolean;
-    virus6: boolean;
-    virus7: boolean;
-    virus8: boolean;
-    virus9: boolean;
-    virus10: boolean;
-    virus11: boolean;
-    virus12: boolean;
-    virus13: boolean;
-    virus14: boolean;
-    virus15: boolean;
-    virus16: boolean;
-    virus17: boolean;
-    virus18: boolean;
-    virus19: boolean;
-    virus20: boolean;
-    virus21: boolean;
-    virus22: boolean;
-    virus23: boolean;
-    virus24: boolean;
-    notIll1: boolean;
-    notIll2: boolean;
-    notIll3: boolean;
-    notIll4: boolean;
-    notIll5: boolean;
-    notIll6: boolean;
-    notIll7: boolean;
-    notIll8: boolean;
-  };
+  // Medical History
+  medicalHistory: MedicalHistory;
 
   // Consent
   hipaaConsent: boolean;
@@ -303,54 +532,7 @@ export default function ConfidentMedicalForm() {
   const sigCanvas = useRef(null);
   const handleClearSignature = (evn) => sigCanvas.current?.clear();
   const [formData, setFormData] = useState<PatientData>({
-    firstName: "",
-    lastName: "",
-    dateOfBirth: "",
-    gender: "",
-    phone: "",
-    email: "",
-    emergencyName: "",
-    emergencyPhone: "",
-    emergencyRelationship: "",
-    hearAboutUs: "",
-    beenIll: false,
-    referralDetails: "",
-    illnesses: {
-      virus1: false,
-      virus2: false,
-      virus3: false,
-      virus4: false,
-      virus5: false,
-      virus6: false,
-      virus7: false,
-      virus8: false,
-      virus9: false,
-      virus10: false,
-      virus11: false,
-      virus12: false,
-      virus13: false,
-      virus14: false,
-      virus15: false,
-      virus16: false,
-      virus17: false,
-      virus18: false,
-      virus19: false,
-      virus20: false,
-      virus21: false,
-      virus22: false,
-      virus23: false,
-      virus24: false,
-      notIll1: false,
-      notIll2: false,
-      notIll3: false,
-      notIll4: false,
-      notIll5: false,
-      notIll6: false,
-      notIll7: false,
-      notIll8: false,
-    },
-    hipaaConsent: false,
-    treatmentConsent: false,
+    ...emptyPatient,
   });
 
   const t = translations[lang];
@@ -375,8 +557,8 @@ export default function ConfidentMedicalForm() {
     const { name, checked } = e.target;
     setFormData((prev) => ({
       ...prev,
-      illnesses: {
-        ...prev.illnesses,
+      medicalHistory: {
+        ...prev.medicalHistory,
         [name]: checked,
       },
     }));
@@ -407,7 +589,6 @@ export default function ConfidentMedicalForm() {
                   firstName: "",
                   lastName: "",
                   dateOfBirth: "",
-                  gender: "",
                   phone: "",
                   email: "",
                   emergencyName: "",
@@ -416,19 +597,25 @@ export default function ConfidentMedicalForm() {
                   hearAboutUs: "",
                   beenIll: false,
                   referralDetails: "",
-                  illnesses: {
-                    virus1: false,
-                    virus2: false,
-                    virus3: false,
-                    virus4: false,
-                    virus5: false,
-                    virus6: false,
-                    virus7: false,
-                    virus8: false,
-                    virus9: false,
-                    notIll1: false,
-                    notIll2: false,
-                    notIll3: false,
+                  medicalHistory: {
+                    epilepsy: false,
+                    jaundiceHistory: false,
+                    pastIllnesses: [],
+                    chronicDiseases: [],
+                    implants: [],
+                    infectionHistory: [],
+                    bleedsLongerAfterCuts: false,
+                    bleedingDisorders: [],
+                    hypercoagulableState: false,
+                    bronchialAsthma: false,
+                    tuberculosisHistory: [],
+                    pepticUlcerSites: [],
+                    otherDiseases: "",
+                    currentMedications: "",
+                    surgeriesHistory: "",
+                    cigarettesPerDay: null,
+                    drinksAlcoholDaily: false,
+                    usesDrugs: false,
                   },
                   hipaaConsent: false,
                   treatmentConsent: false,
@@ -543,385 +730,98 @@ export default function ConfidentMedicalForm() {
                 </div>
               </div>
 
-              {/* Contact Details */}
+              {/* Medical Details */}
               <div className="conf-subsection">
                 <h3 className="conf-subsection-title">{t.sections[1]}</h3>
                 <div className="conf-grid">
-                  {/** Virus 1 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[0].question}
+                  {/** Questions 1 */}
+                  <div className="flex flex-col gap-4">
+                    <div className="conf-field">
                       <div className="conf-checkbox  ">
                         <input
-                          id="virus-1"
+                          id="epilepsy"
                           type="checkbox"
-                          name="virus1"
-                          checked={formData.illnesses.virus1}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-1" className="conf-question-text">
-                          {t.fields.medicalAnswers[0].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input
-                          id="virus-2"
-                          type="checkbox"
-                          name="virus2"
-                          checked={formData.illnesses.virus2}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-2" className="conf-question-text">
-                          {t.fields.medicalAnswers[1].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input
-                          id="virus-3"
-                          type="checkbox"
-                          name="virus3"
-                          checked={formData.illnesses.virus3}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-3" className="conf-question-text">
-                          {t.fields.medicalAnswers[2].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input
-                          id="not-ill-1"
-                          type="checkbox"
-                          name="notIll1"
-                          checked={formData.illnesses.notIll1}
+                          name="epilepsy"
+                          checked={formData.medicalHistory.epilepsy}
                           onChange={handleIllnessChange}
                         />
                         <label
-                          htmlFor="not-ill-1"
+                          htmlFor="epilepsy"
                           className="conf-question-text"
                         >
-                          {t.fields.notBeenIll}
+                          {t.fields.medicalQuestions[0].answers[0].answer}
                         </label>
                       </div>
-                    </label>
-                  </div>
-                  {/** Virus 2 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[1].question}
+                    </div>
+                    <div className="conf-field">
                       <div className="conf-checkbox">
                         <input
-                          id="virus-4"
+                          id="jaundice"
                           type="checkbox"
-                          name="virus4"
-                          checked={formData.illnesses.virus4}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-4" className="conf-question-text">
-                          {t.fields.medicalAnswers[3].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input
-                          id="virus-5"
-                          type="checkbox"
-                          name="virus5"
-                          checked={formData.illnesses.virus5}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-5" className="conf-question-text">
-                          {t.fields.medicalAnswers[4].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox ">
-                        <input
-                          id="virus-6"
-                          type="checkbox"
-                          name="virus6"
-                          checked={formData.illnesses.virus6}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-6" className="conf-question-text">
-                          {t.fields.medicalAnswers[5].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input
-                          id="not-ill-2"
-                          type="checkbox"
-                          name="notIll2"
-                          checked={formData.illnesses.notIll2}
+                          name="jaundice"
+                          checked={formData.medicalHistory.jaundiceHistory}
                           onChange={handleIllnessChange}
                         />
                         <label
-                          htmlFor="not-ill-2"
+                          htmlFor="jaundice"
                           className="conf-question-text"
                         >
-                          {t.fields.notBeenIll}
+                          {t.fields.medicalQuestions[0].answers[1].answer}
                         </label>
                       </div>
-                    </label>
+                    </div>
+                    <div className="conf-field">
+                      <div className="conf-checkbox">
+                        <input
+                          id="hypertension"
+                          type="checkbox"
+                          name="hypertension"
+                          checked={formData.medicalHistory.hypertension}
+                          onChange={handleIllnessChange}
+                        />
+                        <label
+                          htmlFor="jaundice"
+                          className="conf-question-text"
+                        >
+                          {t.fields.medicalQuestions[0].answers[2].answer}
+                        </label>
+                      </div>
+                    </div>
                   </div>
 
-                  {/** Virus 3 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[2].question}
-                      <div className="conf-checkbox  ">
-                        <input
-                          id="virus-7"
-                          type="checkbox"
-                          name="virus7"
-                          checked={formData.illnesses.virus7}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-7" className="conf-question-text">
-                          {t.fields.medicalAnswers[6].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input
-                          id="virus-8"
-                          type="checkbox"
-                          name="virus8"
-                          checked={formData.illnesses.virus8}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-8" className="conf-question-text">
-                          {t.fields.medicalAnswers[7].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input
-                          id="virus-9"
-                          type="checkbox"
-                          name="virus9"
-                          checked={formData.illnesses.virus9}
-                          onChange={handleIllnessChange}
-                        />
-                        <label htmlFor="virus-9" className="conf-question-text">
-                          {t.fields.medicalAnswers[8].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input
-                          id="not-ill-3"
-                          type="checkbox"
-                          name="notIll3"
-                          checked={formData.illnesses.notIll3}
-                          onChange={handleIllnessChange}
-                        />
-                        <label
-                          htmlFor="not-ill-3"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
+                  {/** Questions 2 */}
+                  <div className="flex flex-col gap-4">
+                    <div className="conf-field">
+                      <label className="conf-question-text">
+                        {t.fields.medicalQuestions[1].question}
+                      </label>
+                      {t.fields.medicalQuestions[1].answers.map(
+                        (answer, index) => (
+                          <div className="conf-checkbox" key={index}>
+                            <input
+                              id={`medical-question-1-answer-${index}`}
+                              type="checkbox"
+                              name={`medical-question-1-answer-${index}`}
+                              checked={
+                                formData.medicalHistory[
+                                  `medical-question-1-answer-${index}`
+                                ]
+                              }
+                              onChange={handleIllnessChange}
+                            />
+                            <label
+                              htmlFor={`medical-question-1-answer-${index}`}
+                              className="conf-question-text"
+                            >
+                              {answer.answer}
+                            </label>
+                          </div>
+                        )
+                      )}
+                      <div className="conf-checkbox  "></div>
+                    </div>
                   </div>
-                  {/** Virus 4 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[3].question}
-                      <div className="conf-checkbox ">
-                        <input id="virus-10" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-10"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[9].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-11" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-11"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[10].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-12" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-12"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[11].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="not-ill-4" type="checkbox" value="" />
-                        <label
-                          htmlFor="not-ill-4"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
-                  </div>
-
-                  {/** Virus 5 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[0].question}
-                      <div className="conf-checkbox  ">
-                        <input id="virus-13" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-13"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[12].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-14" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-14"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[13].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input id="virus-15" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-15"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[14].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="not-ill-5" type="checkbox" value="" />
-                        <label
-                          htmlFor="not-ill-5"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
-                  </div>
-                  {/** Virus 6 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[1].question}
-                      <div className="conf-checkbox">
-                        <input id="virus-4" type="checkbox" value="" />
-                        <label htmlFor="virus-4" className="conf-question-text">
-                          {t.fields.medicalAnswers[15].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-5" type="checkbox" value="" />
-                        <label htmlFor="virus-5" className="conf-question-text">
-                          {t.fields.medicalAnswers[16].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox ">
-                        <input id="virus-6" type="checkbox" value="" />
-                        <label htmlFor="virus-6" className="conf-question-text">
-                          {t.fields.medicalAnswers[17].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="not-ill-6" type="checkbox" value="" />
-                        <label
-                          htmlFor="not-ill-6"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
-                  </div>
-
-                  {/** Virus 7 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[2].question}
-                      <div className="conf-checkbox  ">
-                        <input id="virus-19" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-19"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[18].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input id="virus-20" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-20"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[19].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox  ">
-                        <input id="virus-21" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-21"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[20].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="not-ill-7" type="checkbox" value="" />
-                        <label
-                          htmlFor="not-ill-7"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
-                  </div>
-                  {/** Virus 8 section */}
-                  <div className="conf-field">
-                    <label className="conf-question-label">
-                      {t.fields.medicalQuestions[3].question}
-                      <div className="conf-checkbox ">
-                        <input id="virus-22" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-22"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[21].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-23" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-23"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[22].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="virus-24" type="checkbox" value="" />
-                        <label
-                          htmlFor="virus-24"
-                          className="conf-question-text"
-                        >
-                          {t.fields.medicalAnswers[23].answer}
-                        </label>
-                      </div>
-                      <div className="conf-checkbox">
-                        <input id="not-ill-8" type="checkbox" value="" />
-                        <label
-                          htmlFor="not-ill-8"
-                          className="conf-question-text"
-                        >
-                          {t.fields.notBeenIll}
-                        </label>
-                      </div>
-                    </label>
-                  </div>
+                  <div className="conf-checkbox  "></div>
                 </div>
               </div>
 
