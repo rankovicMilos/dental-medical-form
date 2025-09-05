@@ -1,0 +1,106 @@
+{
+  "brand": "ConfiDental",
+  "header.title": "Patient Medical Form",
+  "header.subtitle": "Please fill out all required information",
+  "progress.step": "Step",
+  "progress.of": "of",
+  "progress.percent": "Complete",
+
+  "sections.personal": "Personal Information",
+  "sections.medical": "Medical Details",
+  "sections.emergency": "Emergency Contact",
+  "sections.referral": "How You Found Us",
+  "sections.consent": "Consent & Review",
+
+  "fields.firstName.label": "First Name",
+  "fields.firstName.required": "*",
+  "fields.lastName.label": "Last Name",
+  "fields.lastName.required": "*",
+  "fields.dateOfBirth.label": "Date of Birth",
+  "fields.dateOfBirth.required": "*",
+  "fields.phone.label": "Phone Number",
+  "fields.phone.placeholder": "e.g., +381 63 386 382",
+  "fields.email.label": "Email Address",
+
+  "question.epilepsy": "I suffer from epilepsy",
+  "question.jaundice": "I had jaundice",
+  "question.hypertension": "I have high blood pressure",
+
+  "question.pastIllnesses": "I had?",
+  "answer.pastIllnesses_a": "Rheumatic fever",
+  "answer.pastIllnesses_b": "Bacterial endocarditis",
+  "answer.pastIllnesses_c": "Myocardial infarction (heart attack)",
+
+  "question.chronicDiseases": "I suffer from",
+  "answer.chronicDiseases_a": "Diabetes",
+  "answer.chronicDiseases_b": "Addison's disease",
+  "answer.chronicDiseases_c": "Hyperthyroidism",
+  "answer.chronicDiseases_d": "AIDS",
+
+  "question.implants": "I have an implant",
+  "answer.implants_a": "Artificial heart valve",
+  "answer.implants_b": "Pacemaker",
+  "answer.implants_c": "Artificial hip/artificial knees",
+  "answer.implants_d": "AIDS",
+
+  "question.infectionHistory": "I had",
+  "answer.infectionHistory_a": "Herpes simplex",
+  "answer.infectionHistory_b": "Herpes zoster (shingles)",
+  "answer.infectionHistory_c": "Viral infection",
+
+  "question.cut_bleed": "I bleed longer after cuts",
+  "question.allergies": "I am allergic to",
+  "answer.allergies_a": "Medications",
+  "answer.allergies_b": "Food",
+  "answer.allergies_c": "Other",
+
+  "question.bleedingDisorders": "I suffer from",
+  "answer.bleedingDisorders_a": "Hemophilia",
+  "answer.bleedingDisorders_b": "Thrombocytopenia",
+  "answer.bleedingDisorders_c": "Leukemia",
+  "answer.bleedingDisorders_d": "Von Willebrand disease",
+
+  "question.blood_clot": "I suffer from excessive blood clotting",
+  "question.asthma": "I suffer from bronchial asthma",
+
+  "question.tuberculosisHistory": "I had",
+  "answer.tuberculosisHistory_a": "Pulmonary tuberculosis",
+  "answer.tuberculosisHistory_b": "Tuberculosis of other organs",
+
+  "question.pepticUlcerSites": "I suffer from an ulcer of the",
+  "answer.pepticUlcerSites_a": "Stomach",
+  "answer.pepticUlcerSites_b": "Duodenum",
+
+  "question.otherDiseases": "I suffer from diseases not listed in this questionnaire?",
+  "question.medications": "I am currently taking the following medications:",
+  "question.surgeries": "So far I have had surgeries:",
+  "question.cigarettes": "I smoke {{count}} cigarettes per day",
+  "question.alcohol": "I drink alcohol daily",
+  "question.drugs": "I use drugs",
+
+  "flags.notBeenIll": "I have not been ill",
+
+  "review.title": "Review Your Information",
+  "review.name": "Name",
+  "review.dob": "Date of Birth",
+  "review.phone": "Phone",
+  "review.email": "Email",
+  "review.emergency": "Emergency Contact",
+  "review.heard": "Heard About Us",
+
+  "consent.hipaa": "I acknowledge that I have received and understand the HIPAA Privacy Notice and consent to the use and disclosure of my protected health information for treatment, payment, and healthcare operations.",
+  "consent.treatment": "I consent to examination and treatment by the dentist and understand that no guarantee has been made regarding the outcome of treatment.",
+
+  "success.title": "Thank You!",
+  "success.text": "Your information has been submitted successfully. Please have a seat and we'll call you shortly.",
+  "success.newForm": "New form",
+
+  "buttons.prev": "Previous",
+  "buttons.next": "Next",
+  "buttons.submit": "Submit Form",
+
+  "langs.en": "EN",
+  "langs.rs": "RS",
+  "consent.note": "I have been informed about the nature of my condition/disorder/illness, the type of surgical procedure or other dental intervention and the results or improvements that can be expected from them, with or without the use of alternative methods. Since I have received answers to all my questions, I consent to the proposed intervention in accordance with Article 23 of the Law on Health Care (Official Gazette RS 107/05). I consent to dental radiography for diagnostic purposes. If, for any reason, I am not allowed to be exposed to radiation, I undertake to inform the clinic staff and the attending doctor about it. I voluntarily consent to the removal of problematic teeth for the needs of the Confident Clinic Center.",
+  "consent.note2": "I have discussed the possibility of major risks or complications of the proposed procedure and local anesthesia, including but not limited to allergic reactions to medications, infection, swelling and bruising, pain, numbness of the skin, mucous membranes, and teeth, loss of consciousness, bleeding. In addition, I have been made aware of the impossibility of completely excluding unforeseen complications during any intervention, as well as the possibility of failure and the way it may be resolved. Patients are obliged to attend regular six-month check-ups. Otherwise, Confident Clinic does not bear responsibility for possible complications."
+}

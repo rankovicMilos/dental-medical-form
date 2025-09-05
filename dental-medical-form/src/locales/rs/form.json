@@ -1,0 +1,104 @@
+{
+  "brand": "ConfiDental",
+  "header.title": "Medicinski obrazac pacijenta",
+  "header.subtitle": "Molimo popunite sve obavezne podatke",
+  "progress.step": "Korak",
+  "progress.of": "od",
+  "progress.percent": "Završeno",
+
+  "sections.personal": "Lični podaci",
+  "sections.medical": "Medicinski podaci",
+  "sections.review": "Pregled",
+
+  "fields.firstName.label": "Ime",
+  "fields.lastName.label": "Prezime",
+  "fields.dateOfBirth.label": "Datum rođenja",
+  "fields.phone.label": "Broj telefona",
+  "fields.phone.placeholder": "npr. +381 63 386 382",
+  "fields.email.label": "Email adresa",
+  "fields.details.label": "Dodatni detalji (opciono)",
+  "fields.details.placeholder": "Navedite dodatne informacije...",
+
+  "question.epilepsy": "Bolujem od epilepsije",
+  "question.jaundice": "Imao/la sam žuticu",
+  "question.hypertension": "Imam povišen krvni pritisak",
+
+  "question.pastIllnesses": "Preležao/la sam:",
+  "answer.pastIllnesses_a": "Reumatska groznica",
+  "answer.pastIllnesses_b": "Bakterijski endokarditis",
+  "answer.pastIllnesses_c": "Infarkt miokarda",
+
+  "question.chronicDiseases": "Bolujem od:",
+  "answer.chronicDiseases_a": "Dijabetesa",
+  "answer.chronicDiseases_b": "Adisonove bolesti",
+  "answer.chronicDiseases_c": "Hipertireoidizma",
+  "answer.chronicDiseases_d": "AIDS-a",
+
+  "question.implants": "Imam implant:",
+  "answer.implants_a": "Veštački srčani zalistak",
+  "answer.implants_b": "Pejsmejker",
+  "answer.implants_c": "Veštački kuk/kolena",
+  "answer.implants_d": "AIDS",
+
+  "question.infectionHistory": "Imao/la sam:",
+  "answer.infectionHistory_a": "Herpes simpleks",
+  "answer.infectionHistory_b": "Herpes zoster (šindra)",
+  "answer.infectionHistory_c": "Virusnu infekciju",
+
+  "question.cut_bleed": "Dugo krvarim posle posekotina",
+
+  "question.allergies": "Alergičan/na sam na:",
+  "answer.allergies_a": "Lekove",
+  "answer.allergies_b": "Hranu",
+  "answer.allergies_c": "Ostalo",
+
+  "question.bleedingDisorders": "Bolujem od:",
+  "answer.bleedingDisorders_a": "Hemofilije",
+  "answer.bleedingDisorders_b": "Trombocitopenije",
+  "answer.bleedingDisorders_c": "Leukemije",
+  "answer.bleedingDisorders_d": "Fon Vilebrandove bolesti",
+
+  "question.blood_clot": "Imam povećano zgrušavanje krvi",
+  "question.asthma": "Bolujem od bronhijalne astme",
+
+  "question.tuberculosisHistory": "Preležao/la sam:",
+  "answer.tuberculosisHistory_a": "Plućnu tuberkulozu",
+  "answer.tuberculosisHistory_b": "Tuberkulozu drugih organa",
+
+  "question.pepticUlcerSites": "Imam čir na:",
+  "answer.pepticUlcerSites_a": "Želucu",
+  "answer.pepticUlcerSites_b": "Dvanaestopalačnom crevu",
+
+  "question.otherDiseases": "Bolujem od bolesti koje nisu navedene u upitniku?",
+  "question.medications": "Trenutno uzimam sledeće lekove:",
+  "question.surgeries": "Do sada sam imao/la operacije:",
+  "question.cigarettes": "Pušim {{count}} cigareta dnevno",
+  "question.alcohol": "Pijem alkohol svakodnevno",
+  "question.drugs": "Koristim droge",
+
+  "flags.notBeenIll": "Nisam imao/la bolesti",
+
+  "review.title": "Proverite svoje podatke",
+  "review.name": "Ime i prezime",
+  "review.dob": "Datum rođenja",
+  "review.phone": "Telefon",
+  "review.email": "Email",
+  "review.emergency": "Hitni kontakt",
+  "review.heard": "Kako ste čuli za nas",
+
+  "consent.hipaa": "Potvrđujem da sam primio/la i razumem Obaveštenje o privatnosti (HIPAA) i dajem saglasnost za upotrebu i otkrivanje mojih zdravstvenih podataka u svrhe lečenja, naplate i zdravstvenih usluga.",
+  "consent.treatment": "Dajem saglasnost za pregled i lečenje kod stomatologa i razumem da se ne može garantovati ishod lečenja.",
+
+  "success.title": "Hvala!",
+  "success.text": "Vaši podaci su uspešno poslati. Molimo sedite, pozvaćemo Vas uskoro.",
+  "success.newForm": "Novi obrazac",
+
+  "buttons.prev": "Nazad",
+  "buttons.next": "Dalje",
+  "buttons.submit": "Pošalji obrazac",
+
+  "langs.en": "EN",
+  "langs.rs": "RS",
+  "consent.note": "Obavešten/a sam o prirodi svog stanja / poremećaja / oboljenja, vrsti hirurškog zahvata ili druge stomatološke intervencije i rezultatima, odnosno poboljšanjima koja se od njih, uz upotrebu i odsustvo alternativne postupke, mogu očekivati. Pošto sam dobio/la odgovore na sva pitanja, pristajem na predloženu intervenciju shodno čl. 23. Zakona o zdravstvenoj zaštiti (Sl. Gl. RS 107/05). Pristajem na radiografisanje zuba u dijagnostičke svrhe. Ukoliko iz bilo kog razloga ne smem da se lažem zračenju, obavezujem se da ću o tome obavestiti osoblje ordinacije i ordinirajućeg lekara. Dobrovoljno pristajem na odstranjivanje problematičnih zuba za potrebe Confident Clinic centra.",
+  "consent.note2": "Prodiskutovalo/a sam o mogućnosti najvećih rizika ili komplikacija predloženog zahvata i lokalne anestezije, uključujući ali ne ograničavajući se samo na alergijske reakcije na lekove, infekciju, otoke i podlive, bolove, utrnulost kože, sluzokože i zuba, gubitak svesti, krvarenje. Pored toga, istaknuta mi je nemogućnost isključivanja nekorektne komplikacije pri bilo kojoj intervenciji, kao i mogućnost neuspeha i način njegovog rešavanja. Pacijenti su u obavezi da se odazivaju na redovne šestomesečne kontrole. U suprotnom Confident Clinic ne snosi odgovornost za eventualne komplikacije."
+}

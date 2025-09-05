@@ -36,7 +36,7 @@ body,
 #root,
 .confident-intake-root,
 .conf-wrapper {
-  @apply min-h-full h-auto bg-[var(--conf-bg)];
+  @apply min-h-full h-auto bg-[var(--conf-bg)] text-base;
 }
 
 /* now define your component classes */
@@ -87,6 +87,9 @@ body,
 .conf-section-head {
   @apply mb-[18px];
 }
+#medical {
+  @apply mt-5 mb-4 text-sm text-[var(--conf-muted)];
+}
 .conf-section-title {
   @apply m-0 text-[22px] font-medium text-[var(--conf-text)];
 }
@@ -96,13 +99,15 @@ body,
 .conf-span-2 {
   @apply col-span-1 md:col-span-2;
 }
-
+legend {
+  @apply mb-2 block text-base font-medium text-[var(--conf-text)];
+}
 .conf-label {
-  @apply mb-2 block text-sm text-gray-700;
+  @apply mb-2 block text-base text-gray-700;
 }
 
 .conf-question-label {
-  @apply mb-4 block text-sm font-medium text-[var(--conf-text)];
+  @apply mb-4 block text-sm font-medium text-base;
 }
 
 .conf-question-text {
@@ -117,7 +122,7 @@ body,
 }
 
 .conf-signature-container {
-  @apply mt-2.5 flex flex-col items-end gap-2;
+  @apply mt-2.5 flex flex-col col-span-2 items-end gap-2;
 }
 .conf-signature {
   @apply w-full max-w-[350px] overflow-hidden rounded-lg border border-[var(--conf-muted)] bg-white;
@@ -137,10 +142,13 @@ body,
 }
 
 .conf-consent {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col col-span-2 gap-3;
+}
+.conf-consent-text {
+  @apply text-sm  w-full;
 }
 .conf-checkbox {
-  @apply flex items-center gap-2.5 text-sm m-2 text-gray-900;
+  @apply items-center gap-2.5 text-sm m-2 text-gray-900;
 }
 
 .conf-checkbox input {
