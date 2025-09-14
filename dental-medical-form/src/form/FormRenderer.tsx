@@ -14,7 +14,7 @@ interface FormData {
 }
 
 export const FormRenderer: React.FC = () => {
-  const { t } = useTranslation("form");
+  const { t, i18n } = useTranslation("form");
   const { register, handleSubmit, watch } = useForm<FormData>();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const sigCanvas = useRef<any>(null);
@@ -24,13 +24,41 @@ export const FormRenderer: React.FC = () => {
   const watchedValues = watch();
   console.log("Current form values:", watchedValues);
 
-  const onSubmit = (formData: FormData) => {
+  const onSubmit = async (formData: FormData) => {
     console.log("Submitting formData:", formData);
+
     // Add signature data if available
     if (sigCanvas.current?.toDataURL) {
       formData.signature = sigCanvas.current.toDataURL();
     }
-    // ...post formData somewhere
+
+    try {
+      // Send form data to backend email service
+      const response = await fetch("http://localhost:3001/api/send-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formData,
+          lang: i18n.language, // current language
+        }),
+      });
+
+      const result = await response.json();
+      console.log("Email service response:", result);
+      if (result.success) {
+        console.log("Email sent successfully:", result.messageId);
+        // You can show a success message or redirect here
+        alert("Form submitted successfully! Email has been sent.");
+      } else {
+        console.error("Failed to send email:", result.message);
+        alert("Failed to submit form: " + result.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error submitting form. Please try again.");
+    }
   };
 
   return (

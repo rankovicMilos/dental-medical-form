@@ -35,18 +35,25 @@ export const QuestionRenderer: React.FC<Props> = ({ question, register }) => {
     return (
       <fieldset>
         <legend>{qLabel}</legend>
-        {question.answerIds.map((aId) => (
-          <label htmlFor={aId} key={aId} className="conf-label">
-            <input
-              {...register(question.id)}
-              type="checkbox"
-              className="conf-checkbox"
-              value={aId} // value identifies the choice
-              id={aId}
-            />{" "}
-            {t(`answer.${aId}`)}
-          </label>
-        ))}
+        {question.answerIds.map((aId) => {
+          const answerText = t(`answer.${aId}`);
+          return (
+            <label
+              htmlFor={`${question.id}-${aId}`}
+              key={aId}
+              className="conf-label"
+            >
+              <input
+                {...register(question.id)}
+                type="checkbox"
+                className="conf-checkbox"
+                value={answerText} // Use translated text as value instead of ID
+                id={`${question.id}-${aId}`}
+              />{" "}
+              {answerText}
+            </label>
+          );
+        })}
       </fieldset>
     );
   }
@@ -55,21 +62,25 @@ export const QuestionRenderer: React.FC<Props> = ({ question, register }) => {
     return (
       <fieldset>
         <legend>{qLabel}</legend>
-        {question.answerIds.map((aId) => (
-          <label
-            htmlFor={`${question.id}-${aId}`}
-            key={aId}
-            className="conf-label"
-          >
-            <input
-              {...register(question.id)}
-              type="radio"
-              value={aId} // each radio carries its own value
-              id={`${question.id}-${aId}`}
-            />{" "}
-            {t(`answer.${aId}`)}
-          </label>
-        ))}
+        {question.answerIds.map((aId) => {
+          const answerText = t(`answer.${aId}`);
+          console.log("answerText", answerText);
+          return (
+            <label
+              htmlFor={`${question.id}-${aId}`}
+              key={aId}
+              className="conf-label"
+            >
+              <input
+                {...register(question.id)}
+                type="radio"
+                value={answerText} // Use translated text as value instead of ID
+                id={`${question.id}-${aId}`}
+              />{" "}
+              {answerText}
+            </label>
+          );
+        })}
       </fieldset>
     );
   }
